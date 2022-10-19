@@ -4,6 +4,7 @@
 
 {{ define "main" }}
 <main id="main" class="post">
+  <h1>{{ .Title }}</h1>
   {{ if cond (ne .Params.toc nil) .Params.toc .Site.Params.toc }}
   {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
   <details>

@@ -85,6 +85,13 @@
   <!-- google analytics -->
   {{ template "_internal/google_analytics_async.html" . }}
 
+  <script>
+    <!-- Open cross domain links in new tab  -->
+    Array.from(document.links)
+      .filter(link => link.hostname != window.location.hostname)
+      .forEach(link => link.target = '_blank');
+  </script>
+
 </body>
 
 </html>
